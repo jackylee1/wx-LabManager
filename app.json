@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/info/info",
+    "pages/instrument/instrument",
+    "pages/security/security",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/info/info",
+        "text": "公告信息",
+        "iconPath": "/images/info/left.png",
+        "selectedIconPath": "/images/info/left-active.png"
+      },
+      {
+        "pagePath": "pages/instrument/instrument",
+        "text": "仪器管理",
+        "iconPath": "/images/info/blank.png",
+        "selectedIconPath": "/images/info/blank-active.png"
+      },
+      {
+        "pagePath": "pages/security/security",
+        "text": "环境监测",
+        "iconPath": "/images/info/connection.png",
+        "selectedIconPath": "/images/info/connection-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/images/info/browser.png",
+        "selectedIconPath": "/images/info/browser-active.png"
+      }
+    ]
+  }
+}

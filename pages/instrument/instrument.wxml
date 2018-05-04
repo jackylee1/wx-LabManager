@@ -1,0 +1,63 @@
+<view class="page">
+
+  <!-- 搜索 -->
+  <view class="page__bd" style="padding-bottom:10px;">
+    <view class="weui-search-bar" style="background-color:#f8f8f8; border-top:0px;border-bottom:0px;margin-top:2px;">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>示波器</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>试管</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>平衡车</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>磁铁</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="page__bd">
+    <view class="weui-cells__title">仪器列表</view>
+    <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{instrument}}" wx:key="*this">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item.title}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">{{item.description}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+
+  <!-- 功能 -->
+  <view class="page__bd page__bd_spacing" style='margin-top:20px;'>
+      <button class="weui-btn" type="default" style='font-size:30rpx;background-color:#fff'>新增仪器</button>
+  </view>
+
+</view>

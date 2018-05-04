@@ -1,0 +1,44 @@
+<view class="page">
+
+  <!-- 公告 -->
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">公告列表</view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text" style="font-size:35rpx;">
+            <icon type="info_circle" size="20" style="margin-right:5px; margin-bottom:3px;"></icon>
+            实验室智能管理系统使用指南
+          </view>
+          <view class="weui-media-box__desc" style="font-size:30rpx;">进入实验室使用微信扫描墙壁上方二维码，获取用户实验记录信息。</view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text" style="font-size:35rpx;">
+            <icon type="info_circle" size="20" style="margin-right:5px; margin-bottom:3px;"></icon>
+            五一期间实验室关闭通知
+          </view>
+          <view class="weui-media-box__desc" style="font-size:30rpx;">五一放假期间（4.29 ~ 5.1）开放实验室关闭使用，请知晓。</view>
+        </view>
+      </view>
+      <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <view class="weui-cell__bd">查看更多</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能 -->
+  <view class="page__bd" style="padding-bottom:10px;">
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="*this">
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active" style="padding:15px 10px;">
+          <image class="weui-grid__icon" src="{{item.icon}}" />
+          <view class="weui-grid__label" style="font-size:30rpx;">{{item.title}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+
+</view>
