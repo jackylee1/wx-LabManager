@@ -12,6 +12,7 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/info/info",
